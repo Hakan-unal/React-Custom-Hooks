@@ -10,7 +10,8 @@ const App = () => {
   const [name, setName] = useLocalStorage("name", "")
   const [surname, setSurname] = useState("")
   const renderCount = useRef(0)
-  const inputRef = useRef(0)
+  const inputRef = useRef("")
+  const prevInputRef = useRef("")
 
 
 
@@ -22,6 +23,10 @@ const App = () => {
   useEffect(() => {
     renderCount.current = renderCount.current + 1
   })
+
+  useEffect(() => {
+    prevInputRef.current = surname
+  }, [surname])
 
 
 
@@ -46,6 +51,9 @@ const App = () => {
 
 
         <p>{renderCount.current}</p>
+        <p>Now: {surname}</p>
+        <p>Previous:{prevInputRef.current}</p>
+
       </div>
     </>
   );
