@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import { Button } from "./components/button/button"
 import { useLocalStorage } from "./useLocalStorage"
 import './App.css';
 
@@ -49,10 +49,14 @@ const App = () => {
         ></input>
         <button onClick={handleSubmit}>Submit</button>
 
-
         <p>{renderCount.current}</p>
         <p>Now: {surname}</p>
         <p>Previous:{prevInputRef.current}</p>
+
+      </div>
+
+      <div className="App">
+        <Button name="Ben bir butonum" />
 
       </div>
     </>
