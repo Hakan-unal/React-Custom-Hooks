@@ -17,7 +17,7 @@ const App = () => {
 
   const handleSubmit = () => {
     inputRef.current.focus()
-    inputRef.current.value = "click"
+    inputRef.current.value = "button click"
   }
 
   useEffect(() => {
